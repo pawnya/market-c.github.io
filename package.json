@@ -1,0 +1,32 @@
+{
+  "name": "dvorec",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com:Pawnya/dvorec.git"
+  },
+  "author": "pavel ivanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/Pawnya/dvorec/issues"
+  },
+  "homepage": "https://gitlab.com/Pawnya/dvorec#README",
+  "devDependencies": {
+    "browser-sync": "^2.23.6",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect-php": "^1.0.3",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-plumber": "^1.0.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-uglify": "^1.5.4"
+  },
+  "dependencies": {}
+}
