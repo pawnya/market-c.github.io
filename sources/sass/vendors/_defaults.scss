@@ -117,3 +117,46 @@ li {
 a {
     text-decoration: none;
 }
+
+.btn {
+    position: relative;
+    padding: 8px 45px 11px;
+    min-width: 160px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+    color: #ffffff;
+    background: #000000;
+    border-radius: 22px;
+
+    &:before {
+        position: absolute;
+        content: '';
+        bottom: -11px;
+        left: 50%;
+        width: calc(100% - 50px);
+        height: 18px;
+        background: linear-gradient(9.93deg, #9934ff 27.9%, #79e2ff 88.81%);
+        filter: blur(13.5914px);
+        border-radius: 21.5px;
+        z-index: -1;
+        transform: translateX(-50%);
+    }
+
+    &-wrap {
+        margin-top: 50px;
+    }
+
+    &__link {
+        margin-left: 45px;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 24px;
+        text-align: center;
+        color: #000000;
+
+    }
+}
