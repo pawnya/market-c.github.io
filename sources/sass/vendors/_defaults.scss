@@ -158,6 +158,10 @@ a {
         line-height: 24px;
         text-align: center;
         color: #000000;
+    }
 
+    &_white {
+        color: #000;
+        background: #fff;
     }
 }
