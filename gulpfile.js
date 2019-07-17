@@ -13,6 +13,12 @@ var connect = require('gulp-connect-php');
 var sourcesPath = './sources';
 var assetsPath  = './assets';
 
+var jslibs = [
+    sourcesPath + '/js/vendors/swiper.js',
+    sourcesPath + '/js/app.js'
+];
+
+
 gulp.task('sass', function() {
     return gulp.src(sourcesPath + '/sass/main.scss')
         .pipe(plumber())
@@ -25,7 +31,7 @@ gulp.task('sass', function() {
 });
 
 gulp.task('js', function(){
-    return gulp.src(sourcesPath + '/js/**/*.js')
+    return gulp.src(jslibs)
         .pipe(plumber())
         .pipe(concat(assetsPath + '/main.js'))
         .pipe(uglify())
