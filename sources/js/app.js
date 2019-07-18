@@ -78,4 +78,22 @@
         caseSlider.slideNext();
         caseThumbs.slideNext();
     });
+
+    var consult = document.querySelectorAll('.package__btn'),
+        modal = document.querySelector('.modal-wrap'),
+        modalCloseBtn = document.querySelector('.modal__close');
+
+    consult.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            modal.classList.add('open');
+        });
+    })
+
+    modalCloseBtn.addEventListener('click', function() {
+        modalClose();
+    })
+
+    function modalClose() {
+        modal.classList.remove('open');
+    }
 }());
