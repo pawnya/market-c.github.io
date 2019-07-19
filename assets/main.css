@@ -7820,7 +7820,7 @@ p,
       left: 0;
       width: 38px;
       height: 35px;
-      background-image: url("/assets/img/arrow-bq.svg");
+      background-image: url("./assets/img/arrow-bq.svg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: auto;
@@ -7928,7 +7928,7 @@ p,
     margin-top: 153px;
     margin-bottom: 230px;
     padding: 97px 0 105px;
-    background-image: url("/assets/img/bg-star.jpg");
+    background-image: url("./assets/img/bg-star.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover; }
@@ -8159,7 +8159,7 @@ p,
       left: 0;
       width: 10px;
       height: 9px;
-      background-image: url("/assets/img/dot.svg");
+      background-image: url("./assets/img/dot.svg");
       background-repeat: no-repeat;
       background-position: center;
       background-size: auto; }
@@ -8259,7 +8259,7 @@ p,
     left: 38px;
     width: 24px;
     height: 29px;
-    background-image: url("/assets/img/prev-grey.svg");
+    background-image: url("./assets/img/prev-grey.svg");
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 24px 29px;
@@ -8269,7 +8269,7 @@ p,
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out; }
   .arrow-prev:hover:after {
-    background-image: url("/assets/img/prev-white.svg"); }
+    background-image: url("./assets/img/prev-white.svg"); }
 
 .arrow-next {
   position: absolute;
@@ -8304,7 +8304,7 @@ p,
     right: 38px;
     width: 24px;
     height: 29px;
-    background-image: url("/assets/img/next-grey.svg");
+    background-image: url("./assets/img/next-grey.svg");
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 24px 29px;
@@ -8314,7 +8314,7 @@ p,
     -o-transition: all .3s ease-in-out;
     transition: all .3s ease-in-out; }
   .arrow-next:hover:after {
-    background-image: url("/assets/img/next-white.svg"); }
+    background-image: url("./assets/img/next-white.svg"); }
 
 .bonus {
   margin-top: 60px;
@@ -8490,7 +8490,7 @@ p,
     height: 100%;
     border: none;
     background: #000;
-    background-image: url("/assets/img/prev-grey.svg");
+    background-image: url("./assets/img/prev-grey.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 8px;
@@ -8519,7 +8519,7 @@ p,
       -o-transition: all .3s ease-in-out;
       transition: all .3s ease-in-out; }
     .clients-prev:hover {
-      background-image: url("/assets/img/prev-white.svg"); }
+      background-image: url("./assets/img/prev-white.svg"); }
       .clients-prev:hover:before {
         opacity: 1; }
   .clients-next {
@@ -8528,7 +8528,7 @@ p,
     height: 100%;
     border: none;
     background: #000;
-    background-image: url("/assets/img/next-grey.svg");
+    background-image: url("./assets/img/next-grey.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 8px;
@@ -8557,7 +8557,7 @@ p,
       -o-transition: all .3s ease-in-out;
       transition: all .3s ease-in-out; }
     .clients-next:hover {
-      background-image: url("/assets/img/next-white.svg"); }
+      background-image: url("./assets/img/next-white.svg"); }
       .clients-next:hover:before {
         opacity: 1; }
 
@@ -8700,7 +8700,7 @@ p,
     height: 100%;
     border: none;
     background: #000;
-    background-image: url("/assets/img/prev-grey.svg");
+    background-image: url("./assets/img/prev-grey.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 15px;
@@ -8729,7 +8729,7 @@ p,
       -o-transition: all .3s ease-in-out;
       transition: all .3s ease-in-out; }
     .case-prev:hover {
-      background-image: url("/assets/img/prev-white.svg"); }
+      background-image: url("./assets/img/prev-white.svg"); }
       .case-prev:hover:before {
         opacity: 1; }
   .case-next {
@@ -8738,7 +8738,7 @@ p,
     height: 100%;
     border: none;
     background: #000;
-    background-image: url("/assets/img/next-grey.svg");
+    background-image: url("./assets/img/next-grey.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 15px;
@@ -8767,7 +8767,7 @@ p,
       -o-transition: all .3s ease-in-out;
       transition: all .3s ease-in-out; }
     .case-next:hover {
-      background-image: url("/assets/img/next-white.svg"); }
+      background-image: url("./assets/img/next-white.svg"); }
       .case-next:hover:before {
         opacity: 1; }
 
@@ -8882,7 +8882,7 @@ p,
   padding-top: 80px;
   padding-bottom: 67px;
   width: 100%;
-  background-image: url("/assets/img/bg-star.jpg");
+  background-image: url("./assets/img/bg-star.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover; }
@@ -8930,7 +8930,7 @@ p,
     font-weight: bold;
     font-size: 16px;
     line-height: 30px;
-    background-image: url("/assets/img/arrow-white.svg");
+    background-image: url("./assets/img/arrow-white.svg");
     background-repeat: no-repeat;
     background-position: left center;
     background-size: 10px 9px; }
@@ -9305,7 +9305,7 @@ p,
       left: 0;
       width: 10px;
       height: 10px;
-      background-image: url("/assets/img/check.svg");
+      background-image: url("./assets/img/check.svg");
       background-repeat: no-repeat;
       background-position: center center;
       background-size: auto; }
