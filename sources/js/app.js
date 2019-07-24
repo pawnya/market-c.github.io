@@ -13,7 +13,7 @@
         strategy.slideNext();
     })
 
-    const reviewsThumbs = new Swiper('.case-img', {
+    const reviewsThumbs = new Swiper('.clients-img', {
         spaceBetween: 0,
         slidesPerView: 1,
         loop: true,
@@ -79,21 +79,98 @@
         caseThumbs.slideNext();
     });
 
+    var phones = document.querySelectorAll('.form__input_phone');
+    phones.forEach(function(phone) {
+        var maskOptions = {
+            mask: '+{7}(000)000-00-00'
+        };
+        var mask = IMask(phone, maskOptions);
+    });
+
     var consult = document.querySelectorAll('.package__btn'),
-        modal = document.querySelector('.modal-wrap'),
-        modalCloseBtn = document.querySelector('.modal__close');
+        strategyBtn = document.querySelectorAll('.btn__strategy'),
+        modalConsult = document.querySelector('.modal-wrap_consult'),
+        modalStrategy = document.querySelector('.modal-wrap_strategy'),
+        modalCloseBtn = document.querySelectorAll('.modal__close');
 
     consult.forEach(function(btn) {
         btn.addEventListener('click', function() {
-            modal.classList.add('open');
+            modalConsult.classList.add('open');
+        });
+    });
+
+    strategyBtn.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            modalStrategy.classList.add('open');
+        });
+    });
+
+    modalCloseBtn.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            modalClose();
         });
     })
 
-    modalCloseBtn.addEventListener('click', function() {
-        modalClose();
-    })
-
     function modalClose() {
-        modal.classList.remove('open');
+        var modalOpen = document.querySelector('.modal-wrap.open');
+
+        modalOpen.classList.remove('open');
     }
+
+    var btnLink       = document.querySelector('.btn__link'),
+        sectionScroll = document.querySelector('.block-row_build').getBoundingClientRect().y;
+    btnLink.addEventListener('click', function(event) {
+        scrollBlock();
+    });
+
+    function scrollBlock() {
+        event.preventDefault();
+        window.scrollTo({
+            top: sectionScroll - 100,
+            behavior: 'smooth'
+        });
+    }
+
+    function sendMail(form) {
+        var xhr = new XMLHttpRequest(),
+            formData = new FormData(form);
+
+        xhr.open('POST', './send.php', true);
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                console.log(xhr.responseText);
+            }
+            else {
+                console.log(xhr.status);
+            }
+        };
+
+        xhr.onerror = function() {
+            reject(new Error("Network Error"));
+        };
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+        xhr.send(formData);
+        console.log(formData);
+    }
+
+    var btnSend = document.querySelectorAll('.btn_send');
+
+    btnSend.forEach(function(btn) {
+        btn.addEventListener('click', function(event) {
+            event.preventDefault();
+            var form = this.parentNode;
+            if (ValidateEmail(form.email)) {
+                sendMail(form);
+            }
+        });
+    });
+
+    function ValidateEmail(mail) {
+        if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail.value)) {
+            return (true)
+        }
+        alert("Введите правильный email")
+        return (false)
+    }
+
 }());

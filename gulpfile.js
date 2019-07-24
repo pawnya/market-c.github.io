@@ -47,10 +47,7 @@ gulp.task('image', () =>
 
 gulp.task('browser-sync', function() {
     browserSync.init({
-        server: {
-            baseDir: "./"
-        },
-        port: 8080
+        proxy: "market-c"
     });
     gulp.watch("*.html").on('change', browserSync.reload);
 });

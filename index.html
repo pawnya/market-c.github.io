@@ -21,10 +21,10 @@
                         <a href="/" class="logo">
                             <img src="./assets/img/logo.svg" alt="Logo" class="logo__img">
                         </a>
-                        <h1 class="h1 mb-30">Чтобы взлететь в бизнесе, как и <br>полететь в космос, нужен план </h1>
+                        <h1 class="h1">Чтобы взлететь в бизнесе, как и <br>полететь в космос, нужен план</h1>
                         <h4 class="h4">Разработаем digital-стратегию, чтобы ваш бизнес вышел на новую орбиту</h4>
                         <div class="btn-wrap">
-                            <button type="button" class="btn" aria-label="Заказать">Заказать</button>
+                            <button type="button" class="btn btn__strategy" aria-label="Заказать">Заказать</button>
                             <a href="#" class="btn__link">Как это работает?</a>
                         </div>
                     </div>
@@ -175,7 +175,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <button type="button" class="btn mt-50" aria-label="Button">Получить структуру документа</button>
+                            <button type="button" class="btn btn__strategy mt-50" aria-label="Button">Получить структуру документа</button>
                         </div>
                     </div>
                 </div>
@@ -552,7 +552,7 @@
                     <div class="main-banner-content">
                         <h2 class="h1">Готовы придать новое ускорение вашему бизнесу?</h2>
                         <p class="text">Напишите нам <a href="mailto:buggi88@gmail.com">buggi88@gmail.com</a> или позвоните <a href="tel:+79272727061">79272727061</a>, обсудим варианты сотрудничества.</p>
-                        <button type="button" class="btn" aria-label="Заказать">Заказать разработку стратегии</button>
+                        <button type="button" class="btn btn__strategy" aria-label="Заказать">Заказать разработку стратегии</button>
                     </div>
                     <div class="main-banner-img">
                         <img src="./assets/img/banner2.jpg" alt="First banner photo" class="main-banner__img">
@@ -594,27 +594,27 @@
                 </div>
             </div>
         </footer>
-        <div class="modal-wrap">
+        <div class="modal-wrap modal-wrap_consult">
             <button type="button" class="modal__close" aria-label="Modal close"></button>
             <div class="modal-form">
-                <form action="" class="form">
+                <form class="form">
                     <label class="form__label">
                         <span>Имя</span>
-                        <input type="text" class="form__input" >
+                        <input type="text" name="name" class="form__input">
                     </label>
                     <label class="form__label">
                         <span>Телефон</span>
-                        <input type="text" class="form__input form__input_phone" >
+                        <input type="text" name="phone" class="form__input form__input_phone">
                     </label>
                     <label class="form__label">
                         <span>Email</span>
-                        <input type="text" class="form__input form__input_email" >
+                        <input type="text" name="email" class="form__input form__input_email">
                     </label>
                     <div class="form-group">
-                        <input type="checkbox" id="check" class="form__check">
+                        <input type="checkbox" id="check" class="form__check" checked>
                         <label for="check" class="form__approve">Я согласен(сна) на обработку персональных данных</label>
                     </div>
-                    <button type="submit"class="btn btn_white">Получить консультацию</button>
+                    <button type="submit" class="btn btn_send btn_white">Получить консультацию</button>
                 </form>
             </div>
             <div class="modal-content">
@@ -623,8 +623,38 @@
                 <p class="text tac">Хотите узнать подробнее о применении диджидал-стратегии в вашем бизнесе? Заполните форму и мы расскажем подробности</p>
             </div>
         </div>
+        <div class="modal-wrap modal-wrap_strategy">
+            <button type="button" class="modal__close" aria-label="Modal close"></button>
+            <div class="modal-form">
+                <form action="" class="form">
+                    <label class="form__label">
+                        <span>Имя</span>
+                        <input type="text" name="fio" class="form__input">
+                    </label>
+                    <label class="form__label">
+                        <span>Телефон</span>
+                        <input type="text" name="phone" class="form__input form__input_phone">
+                    </label>
+                    <label class="form__label">
+                        <span>Email</span>
+                        <input type="text" name="email" class="form__input form__input_email">
+                    </label>
+                    <div class="form-group">
+                        <input type="checkbox" id="check" class="form__check" checked required>
+                        <label for="check" class="form__approve">Я согласен(сна) на обработку персональных данных</label>
+                    </div>
+                    <button type="submit" class="btn btn_send btn_white">Получить консультацию</button>
+                </form>
+            </div>
+            <div class="modal-content">
+                <img src="./assets/img/modal-logo.svg" alt="Logo marketing" class="modal-content__img">
+                <h3 class="h3">Получите структуру стратегии</h3>
+                <p class="text tac">Ознакомьтесь с содержанием и списком документов, входящих в комплекс диджитал-стратегии</p>
+            </div>
+        </div>
     </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+<script src="https://unpkg.com/imask"></script>
 <script src="./assets/main.js"></script>
 </html>
