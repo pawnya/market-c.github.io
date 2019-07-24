@@ -150,7 +150,8 @@
         };
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
         xhr.send(formData);
-        console.log(formData);
+        document.querySelector('.modal-wrap.open').classList.remove('open');
+        form.reset();
     }
 
     var btnSend = document.querySelectorAll('.btn_send');

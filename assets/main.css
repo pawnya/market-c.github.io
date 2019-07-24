@@ -6975,19 +6975,16 @@ select:focus {
 input::-webkit-input-placeholder,
 select::-webkit-input-placeholder {
   color: #c0c0c0;
-  text-align: center;
   font-weight: 300; }
 
 input:-ms-input-placeholder,
 select:-ms-input-placeholder {
   color: #c0c0c0;
-  text-align: center;
   font-weight: 300; }
 
 input::placeholder,
 select::placeholder {
   color: #c0c0c0;
-  text-align: center;
   font-weight: 300; }
 
 select {

@@ -5,7 +5,7 @@ if ($_POST) {
         "p.ivanov@pro100agency.ru",
     ]; //куда отправлять письмо
     $from = "no-reply@noreply.ru"; // от кого
-    $subject = "Новая заявка на аудит сайта"; //тема
+    $subject = "Новая заявка с сайта"; //тема
 
 
     $message = "Имя: " . filter_var($_POST['name'] ?? '', FILTER_SANITIZE_STRING) . "\r\n";
