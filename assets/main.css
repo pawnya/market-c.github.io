@@ -7631,6 +7631,9 @@ body {
   padding: 0;
   max-width: 1110px;
   width: 100%; }
+  @media screen and (max-width: 1024px) {
+    .container {
+      padding: 0 30px; } }
 
 h1,
 .h1 {
@@ -7731,10 +7734,16 @@ p,
     .main-banner_footer {
       margin-top: 155px;
       height: 679px; }
+      @media screen and (max-width: 1024px) {
+        .main-banner_footer {
+          height: 450px; } }
       .main-banner_footer .main-banner-content {
         padding-top: 202px;
         -ms-flex-align: start;
             align-items: flex-start; }
+        @media screen and (max-width: 1024px) {
+          .main-banner_footer .main-banner-content {
+            padding-top: 80px; } }
         .main-banner_footer .main-banner-content .h1 {
           margin-bottom: 18px;
           max-width: 830px;
@@ -8031,6 +8040,13 @@ p,
       -ms-transform: translateX(-50%);
        -o-transform: translateX(-50%);
           transform: translateX(-50%); }
+    .block-img img {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      -o-object-position: center;
+         object-position: center; }
     .block-img_bg {
       max-width: 445px;
       height: 490px; }
@@ -8054,6 +8070,9 @@ p,
       max-width: 959px; }
       .block-img_result:before {
         content: none; }
+      .block-img_result img {
+        -o-object-fit: contain;
+           object-fit: contain; }
     .block-img_no:before {
       background: transparent;
       -webkit-filter: none;
@@ -8230,6 +8249,7 @@ p,
   background-color: #fff; }
   @media screen and (max-width: 1024px) {
     .strategy {
+      margin-left: 85px;
       max-width: calc(100% - 170px); } }
   .strategy-item {
     display: -ms-flex;
@@ -8500,6 +8520,10 @@ p,
     left: calc(50% + 80px);
     width: calc(50% - 80px);
     height: 100%; }
+    @media screen and (max-width: 1024px) {
+      .clients-img {
+        left: calc(50% + 30px);
+        width: calc(50% - 30px); } }
   .clients__img {
     width: 100%;
     height: 100%;
@@ -8749,6 +8773,11 @@ p,
     display: flex;
     -ms-flex-flow: row nowrap;
         flex-flow: row nowrap; }
+    @media screen and (max-width: 1024px) {
+      .case-pagination {
+        left: 30px;
+        bottom: 40px;
+        height: 55px; } }
     .case-pagination:before {
       position: absolute;
       content: '';
@@ -9196,6 +9225,19 @@ p,
   -ms-flex-align: center;
       align-items: center;
   height: 141px; }
+  @media screen and (max-width: 1024px) {
+    .footer-menu {
+      padding: 30px 0;
+      height: auto;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+      -ms-flex-pack: center;
+          justify-content: center;
+      -ms-flex-align: center;
+          align-items: center; } }
+  @media screen and (max-width: 1024px) {
+    .footer-menu .social__link {
+      margin: 30px 10px 0; } }
 
 .footer-contacts {
   margin-right: auto;
@@ -9204,6 +9246,9 @@ p,
   display: flex;
   -ms-flex-flow: row nowrap;
       flex-flow: row nowrap; }
+  @media screen and (max-width: 1024px) {
+    .footer-contacts {
+      margin-left: auto; } }
 
 .footer__logo {
   width: 332px;
@@ -9252,6 +9297,9 @@ p,
     display: -ms-flex;
     display: -ms-flexbox;
     display: flex; }
+  @media screen and (max-width: 1024px) {
+    .modal-wrap {
+      max-height: 550px; } }
 
 .modal-form {
   width: 50%;
@@ -9271,6 +9319,9 @@ p,
       align-items: center;
   -ms-flex-pack: center;
       justify-content: center; }
+  @media screen and (max-width: 1024px) {
+    .modal-content {
+      padding: 0 30px; } }
   .modal-content__img {
     margin-bottom: 60px;
     width: 85px;
@@ -9299,6 +9350,10 @@ p,
   height: 18px;
   border: none;
   background: transparent; }
+  @media screen and (max-width: 1024px) {
+    .modal__close {
+      top: 40px;
+      right: 40px; } }
   .modal__close:before {
     position: absolute;
     left: 0;
@@ -9334,6 +9389,9 @@ p,
   -ms-flex-align: start;
       align-items: flex-start;
   height: 100%; }
+  @media screen and (max-width: 1024px) {
+    .form {
+      padding: 0 25px 0 65px; } }
   .form__label {
     margin-bottom: 24px;
     padding-bottom: 10px;
