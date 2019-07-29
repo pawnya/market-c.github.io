@@ -3,7 +3,13 @@
         speed: 400,
         slidesPerView: 'auto',
         spaceBetween: 35,
-        loop: true
+        loop: true,
+        breakpoints: {
+            1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+            }
+        }
     });
 
     document.querySelector('.arrow-prev').addEventListener('click', function() {
