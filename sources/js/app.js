@@ -187,29 +187,6 @@
         });
     }
 
-    function sendMail(form) {
-        var xhr = new XMLHttpRequest(),
-            formData = new FormData(form);
-
-        xhr.open('POST', './send.php', true);
-        xhr.onload = function() {
-            if (xhr.status === 200) {
-                console.log(xhr.responseText);
-            }
-            else {
-                console.log(xhr.status);
-            }
-        };
-
-        xhr.onerror = function() {
-            reject(new Error("Network Error"));
-        };
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-        xhr.send(formData);
-        document.querySelector('.modal-wrap.open').classList.remove('open');
-        form.reset();
-    }
-
     var btnSend = document.querySelectorAll('.btn_send');
 
     btnSend.forEach(function(btn) {
@@ -228,6 +205,35 @@
         }
         alert("Введите правильный email")
         return (false)
+    }
+
+    function sendMail(form) {
+        var formData = new FormData(form),
+            xhr = new XMLHttpRequest();
+
+        var themeForm = form.parentElement.nextElementSibling.querySelector('.h3').textContent;
+        formData.append("theme", themeForm);
+
+        xhr.open('POST', './send.php', true);
+
+        // xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+        xhr.onload = function() {
+            if (xhr.status === 200) {
+                console.log(xhr.responseText);
+            }
+            else {
+                console.log(xhr.status);
+            }
+        };
+
+
+        xhr.onerror = function() {
+            reject(new Error("Network Error"));
+        };
+        xhr.send(formData);
+        document.querySelector('.modal-wrap.open').classList.remove('open');
+        form.reset();
     }
 
 }());
