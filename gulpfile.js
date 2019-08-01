@@ -22,7 +22,7 @@ var jslibs = [
 gulp.task('sass', function() {
     return gulp.src(sourcesPath + '/sass/main.scss')
         .pipe(plumber())
-        .pipe(sass().on('error', sass.logError))
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
         .pipe(autoprefixer({
             browsers: ['last 5 versions', 'opera 12', '> 1% in RU', 'ie 8']
         }))
