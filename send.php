@@ -1,7 +1,5 @@
 <?php
     if($_POST) {
-        var_dump($POST);
-        die();
         $to = "p.ivanov@pro100agency.ru"; //куда отправлять письмо
         $from = "no-replay@mail.com"; // от кого
         $subject = $_POST['theme']; //тема
