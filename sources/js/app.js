@@ -8,6 +8,14 @@
             1024: {
                 slidesPerView: 3,
                 spaceBetween: 20,
+            },
+            991: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+            },
+            768: {
+                slidesPerView: 1,
+                spaceBetween: 0,
             }
         }
     });
@@ -75,6 +83,40 @@
             swiper: caseThumbs
         }
     });
+
+    const packageSlider = new Swiper('.package-list', {
+        init: false,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+            el:                '.pagination_package',
+            type:              'bullets',
+            bulletClass:       'pagination-dot',
+            bulletActiveClass: 'active',
+            clickable:         true
+        }
+    });
+
+    if (document.body.clientWidth < 991) {
+        packageSlider.init();
+    }
+
+    const bonus = new Swiper('.bonus', {
+        init: false,
+        slidesPerView: 1,
+        spaceBetween: 10,
+        pagination: {
+            el:                '.pagination_bonus',
+            type:              'bullets',
+            bulletClass:       'pagination-dot',
+            bulletActiveClass: 'active',
+            clickable:         true
+        }
+    });
+
+    if (document.body.clientWidth < 768) {
+        bonus.init();
+    }
 
     document.querySelector('.case-prev').addEventListener('click', function() {
         caseSlider.slidePrev();

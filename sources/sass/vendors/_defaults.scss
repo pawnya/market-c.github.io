@@ -7,9 +7,6 @@
 .right  { float: right; }
 .cl     { clear: left; }
 .cr     { clear: right; }
-.cntr   { text-align: center; }
-.tal    { text-align: left;}
-.tar    { text-align: right !important;}
 
 
 .no-mar { margin: 0 !important; }
@@ -169,6 +166,16 @@ a {
             margin-top: 50px;
         }
 
+        @media screen and (max-width: 768px) {
+            margin-top: 15px;
+            margin-bottom: 30px;
+            display: -webkit-flex;
+            display: -ms-flex;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: flex-start;
+        }
+
         .btn {
             height: 60px;
             font-size: 16px;
@@ -202,6 +209,19 @@ a {
             background-image: linear-gradient(90deg, transparent, transparent 50%, #fff 50%, #fff 100%), linear-gradient(0.98deg, #9934ff 27.9%, #79e2ff 88.81%);
             background-size: 10px 2px, 100% 2px;
         }
+
+        @media screen and (max-width: 768px) {
+            margin-left: 0;
+            margin-bottom: 15px;
+            order: 1;
+        }
+    }
+
+    &__strategy {
+
+        @media screen and (max-width: 768px) {
+            order: 2;
+        }
     }
 
     &_white {
@@ -222,6 +242,10 @@ a {
         width: 63px;
         height: 58px;
         background: linear-gradient(44.56deg, #9934ff 27.9%, #79e2ff 88.81%);
+
+        @media screen and (max-width: 768px) {
+            left: 75px;
+        }
     }
 
     &_strategy {
@@ -231,6 +255,89 @@ a {
             left: 310px;
             width: 104px;
             height: 88px;
+
+            @media screen and (max-width: 768px) {
+                top: 20px;
+                left: 80px;
+            }
+        }
+    }
+}
+
+.order {
+
+    &-1 {
+        @media screen and (max-width: 991px) {
+            order: 1;
+        }
+    }
+
+    &-2 {
+        @media screen and (max-width: 991px) {
+            order: 2;
+        }
+    }
+}
+
+.pagination_package,
+.pagination_bonus {
+    width: 100%;
+    height: 15px;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+
+    @media screen and (max-width: 768px) {
+        margin-top: 15px;
+    }
+
+    .pagination-dot {
+        position: relative;
+        margin: 0 10px;
+        width: 15px;
+        height: 15px;
+        border-radius: 50%;
+        overflow: hidden;
+
+        &:before {
+            position: absolute;
+            content: '';
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 2;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            background: linear-gradient(62deg, #9934ff 28%, #79e2ff 89%);
+            transition: all .3s ease-in-out;
+        }
+
+        &:after {
+            position: absolute;
+            z-index: 1;
+            content: '';
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #cecece;
+        }
+
+        &.active {
+
+            &:before {
+                opacity: 1;
+            }
+        }
+
+        &:focus {
+            outline: none;
         }
     }
 }
