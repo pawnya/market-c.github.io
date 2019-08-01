@@ -5,7 +5,7 @@
         $subject = $_POST['theme']; //тема
         $message = "Имя: ".$_POST['name']."\r\n";
         $message .= "Телефон: ".$_POST['phone']."\r\n";
-        $message .= "Email: ".$_POST['Email'];
+        $message .= "Email: ".$_POST['email'];
         $headers = "From: $from\r\nReplay-To: $from\r\nContent-type: text/plain; charset=utf-8\r\n";
         $result = mail($to, $subject, $message, $headers);
 
