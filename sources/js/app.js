@@ -13,7 +13,7 @@
                 slidesPerView: 2,
                 spaceBetween: 20,
             },
-            768: {
+            767: {
                 slidesPerView: 1,
                 spaceBetween: 0,
             }
@@ -137,8 +137,10 @@
 
     var consult = document.querySelectorAll('.package__btn'),
         strategyBtn = document.querySelectorAll('.btn__strategy'),
+        auditBtn = document.querySelectorAll('.btn__audit'),
         modalConsult = document.querySelector('.modal-wrap_consult'),
         modalStrategy = document.querySelector('.modal-wrap_strategy'),
+        modalAudit = document.querySelector('.modal-wrap_audit'),
         modalCloseBtn = document.querySelectorAll('.modal__close');
 
     consult.forEach(function(btn) {
@@ -150,6 +152,12 @@
     strategyBtn.forEach(function(btn) {
         btn.addEventListener('click', function() {
             modalStrategy.classList.add('open');
+        });
+    });
+
+    auditBtn.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            modalAudit.classList.add('open');
         });
     });
 
