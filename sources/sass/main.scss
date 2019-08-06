@@ -145,8 +145,27 @@ p,
         margin-bottom: 40px;
     }
 
+    @media screen and (max-width: 768px) {
+        margin-top: -30px;
+        margin-left: -30px;
+        padding: 30px 30px 60px;
+        display: -webkit-flex;
+        display: -ms-flex;
+        display: flex;
+        align-items: center;
+        max-width: none;
+        width: calc(100% + 60px);
+        background-color: #fff;
+    }
+
     &__img {
         width: 100%;
+
+        @media screen and (max-width: 768px) {
+            margin: auto;
+            max-width: 321px;
+            width: 100%;
+        }
     }
 }
 
@@ -715,16 +734,16 @@ p,
             height: 421px;
             max-width: 959px;
 
+            @media screen and (max-width: 767px) {
+                height: auto;
+            }
+
             &:before {
                 content: none;
             }
 
             img {
                 object-fit: contain;
-
-                @media screen and (max-width: 767px) {
-                    object-fit: cover;
-                }
             }
         }
 
@@ -977,6 +996,12 @@ p,
                 margin-bottom: 39px;
             }
         }
+    }
+
+    &-picture {
+        width: 100%;
+        height: 100%;
+        display: block;
     }
 }
 
